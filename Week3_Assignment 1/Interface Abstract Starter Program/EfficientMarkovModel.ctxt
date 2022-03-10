@@ -1,0 +1,24 @@
+#BlueJ class context
+comment0.target=EfficientMarkovModel
+comment1.params=n
+comment1.target=EfficientMarkovModel(int)
+comment1.text=\r\n\r\n\ \ \ \ public\ static\ void\ main(String[]\ args)\ {\r\n\r\n\ \ \ \ \ \ \ \ FileResource\ fr\ \=\ new\ FileResource();\r\n\r\n\ \ \ \ \ \ \ \ String\ st\ \=\ fr.asString();\r\n\r\n\ \ \ \ \ \ \ \ st\ \=\ st.replace('\\n',\ '\ ');\r\n\r\n\ \ \ \ \ \ \ \ int\ size\ \=\ 100;\r\n\r\n\ \ \ \ \ \ \ \ EfficientMarkovModel\ markov\ \=\ new\ EfficientMarkovModel(3);\r\n\r\n\ \ \ \ \ \ \ \ markov.setTraining(st);\r\n\r\n\ \ \ \ \ \ \ \ markov.setRandom(36);\r\n\r\n\ \ \ \ \ \ \ \ markov.buildMap();\r\n\r\n\ \ \ \ \ \ \ \ System.out.println(markov.getRandomText(size));\r\n\r\n\ \ \ \ \ \ \ \ markov.printHashMapInfo();\r\n\r\n\ \ \ \ \ \ \ \ System.out.println("running\ with\ "\ +\ markov);\r\n\r\n}
+comment10.params=
+comment10.target=java.lang.String\ toString()
+comment2.params=
+comment2.target=int\ getSeed()
+comment3.params=key
+comment3.target=java.util.ArrayList\ getArrayList(java.lang.String)
+comment4.params=seed
+comment4.target=void\ setRandom(int)
+comment5.params=s
+comment5.target=void\ setTraining(java.lang.String)
+comment6.params=
+comment6.target=void\ buildMap()
+comment7.params=numChars
+comment7.target=java.lang.String\ getRandomText(int)
+comment8.params=key
+comment8.target=java.util.ArrayList\ getFollows(java.lang.String)
+comment9.params=
+comment9.target=void\ printHashMapInfo()
+numComments=11
