@@ -1,0 +1,36 @@
+#BlueJ class context
+comment0.target=QuakeSortInPlace
+comment1.params=
+comment1.target=QuakeSortInPlace()
+comment10.params=in
+comment10.target=void\ sortByMagnitudeWithBubbleSortWithCheck(java.util.ArrayList)
+comment10.text=public\ void\ sortByMagnitudeWithBubbleSortWithCheck(ArrayList<QuakeEntry>\ in){\r\n\ \ \ \ \ \ \ \ for(int\ i\=0;\ i<in.size();\ i++){\r\n\ \ \ \ \ \ \ \ \ \ \ \ if(checkInSortedOrder(in)){\ System.out.println("\\nIt\ took\ "\ +\ i\ +\ "\ passes\ to\ sort\!\\n");\ break;\ }\r\n\ \ \ \ \ \ \ \ \ \ \ \ else\ onePassBubbleSort(in,\ i);\r\n\ \ \ \ \ \ \ \ }\r\n}
+comment11.params=
+comment11.target=void\ testSort()
+comment11.text=public\ void\ onePassBubbleSort(ArrayList<QuakeEntry>\ quakeData,\ int\ numSorted){\r\n\ \ \ \ \ \ \ \ for(int\ i\=0;\ i<quakeData.size()-1;\ i++){\r\n\ \ \ \ \ \ \ \ \ \ \ \ if(quakeData.get(i).getMagnitude()\ >\ quakeData.get(i+1).getMagnitude()){\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ QuakeEntry\ holder\ \=\ quakeData.get(i+1);\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ quakeData.set(i+1,\ quakeData.get(i));\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ quakeData.set(i,\ holder);\r\n\ \ \ \ \ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ }\r\n}
+comment12.params=
+comment12.target=void\ testSort4()
+comment13.params=
+comment13.target=void\ createCSV()
+comment14.params=list
+comment14.target=void\ dumpCSV(java.util.ArrayList)
+comment2.params=quakes\ from
+comment2.target=int\ getSmallestMagnitude(java.util.ArrayList,\ int)
+comment3.params=in
+comment3.target=void\ sortByMagnitude(java.util.ArrayList)
+comment4.params=quakeData\ from
+comment4.target=int\ getLargestDepth(java.util.ArrayList,\ int)
+comment5.params=in
+comment5.target=void\ sortByLargestDepth(java.util.ArrayList)
+comment5.text=public\ void\ sortByLargestDepth(ArrayList<QuakeEntry>\ in){\r\n\ \ \ \ \ \ \ \ for(int\ i\=0;\ i<70;\ i++){\r\n\ \ \ \ \ \ \ \ \ \ \ \ int\ maxIdx\ \=\ getLargestDepth(in,\ i);\r\n\ \ \ \ \ \ \ \ \ \ \ \ QuakeEntry\ qi\ \=\ in.get(i);\r\n\ \ \ \ \ \ \ \ \ \ \ \ QuakeEntry\ qmax\ \=\ in.get(maxIdx);\r\n\ \ \ \ \ \ \ \ \ \ \ \ if(qi\!\=qmax){\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ in.set(i,\ qmax);\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ in.set(maxIdx,\ qi);\r\n\ \ \ \ \ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ }\r\n}
+comment6.params=
+comment6.target=void\ testSortLargestDepth()
+comment7.params=quakeData\ numSorted
+comment7.target=void\ onePassBubbleSort(java.util.ArrayList,\ int)
+comment8.params=quakes
+comment8.target=boolean\ checkInSortedOrder(java.util.ArrayList)
+comment8.text=public\ boolean\ checkInSortedOrder(ArrayList<QuakeEntry>\ quakes){\r\n\ \ \ \ \ \ \ \ for(int\ i\=0;\ i<quakes.size()-1;\ i++){\r\n\ \ \ \ \ \ \ \ \ \ \ \ if(quakes.get(i).getMagnitude()\ >\ quakes.get(i+1).getMagnitude()){return\ false;}\r\n\ \ \ \ \ \ \ \ }return\ true;\r\n}
+comment9.params=in
+comment9.target=void\ sortByMagnitudeWithCheck(java.util.ArrayList)
+comment9.text=public\ void\ sortByMagnitudeWithCheck(ArrayList<QuakeEntry>\ in){\r\n\ \ \ \ \ \ \ \ for(int\ i\=0;\ i<in.size();\ i++){\r\n\ \ \ \ \ \ \ \ \ \ \ \ if(checkInSortedOrder(in)){\ System.out.println("\\nIt\ took\ "\ +\ i\ +\ "\ passes\ to\ sort\!\\n");\ break;\ }\r\n\ \ \ \ \ \ \ \ \ \ \ \ sortByMagnitude(in);\r\n\ \ \ \ \ \ \ \ }\r\n}
+numComments=15
