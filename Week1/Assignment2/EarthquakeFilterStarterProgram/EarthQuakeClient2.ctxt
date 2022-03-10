@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=EarthQuakeClient2
+comment1.params=
+comment1.target=EarthQuakeClient2()
+comment2.params=quakeData\ f
+comment2.target=java.util.ArrayList\ filter(java.util.ArrayList,\ Filter)
+comment3.params=
+comment3.target=void\ quakesWithFilter()
+comment4.params=
+comment4.target=void\ testMatchAllFilter2()
+comment4.text=public\ void\ testMatchAllFilter(){\r\n\ \ \ \ \ \ \ \ EarthQuakeParser\ parser\ \=\ new\ EarthQuakeParser();\ \r\n\ \ \ \ \ \ \ \ String\ source\ \=\ "data/nov20quakedata.atom";\r\n\ \ \ \ \ \ \ \ ArrayList<QuakeEntry>\ list\ \ \=\ parser.read(source);\ \ \ \ \ \ \ \ \ \r\n\ \ \ \ \ \ \ \ \r\n\ \ \ \ \ \ \ \ System.out.println("read\ data\ for\ "+list.size()+"\ quakes");\r\n\ \ \ \ \ \ \ \ int\ count\ \=0;\r\n\ \ \ \ \ \ \ \ //Commented\ out\ as\ required\:\r\n\ \ \ \ \ \ \ \ //for(QuakeEntry\ qe\ \:\ list){\r\n\ \ \ \ \ \ \ \ //\ \ \ \ System.out.println(qe);\r\n\ \ \ \ \ \ \ \ //}\r\n\ \ \ \ \ \ \ \ MatchAllFilter\ maf\ \=\ new\ MatchAllFilter();\r\n\ \ \ \ \ \ \ \ Filter\ f1\ \=\ new\ MagnitudeFilter(0.0,2.0);\r\n\ \ \ \ \ \ \ \ maf.addFilter(f1);\r\n\ \ \ \ \ \ \ \ Filter\ f2\ \=\ new\ DepthFilter(-100000.0,-10000.0);\r\n\ \ \ \ \ \ \ \ maf.addFilter(f2);\r\n\ \ \ \ \ \ \ \ Filter\ f3\ \=\ new\ PhraseFilter("a","any");\r\n\ \ \ \ \ \ \ \ maf.addFilter(f3);\r\n\ \ \ \ \ \ \ \ ArrayList<QuakeEntry>\ quakes\ \=\ filter(list,maf);\r\n\ \ \ \ \ \ \ \ for(QuakeEntry\ qe\ \:\ quakes){\r\n\ \ \ \ \ \ \ \ \ \ \ \ System.out.println(qe);\r\n\ \ \ \ \ \ \ \ \ \ \ \ count++;\r\n\ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ System.out.println("Filters\ used\ are\:\ "\ +\ maf.getName()\ +\ "\ and\ count\ \=\ "\ +\ count);\r\n}
+comment5.params=
+comment5.target=void\ createCSV()
+comment6.params=list
+comment6.target=void\ dumpCSV(java.util.ArrayList)
+numComments=7
